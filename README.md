@@ -1,45 +1,63 @@
 # ByteCompressor
 
-ByteCompressor is a simple yet powerful tool for file compression and decompression, implemented in C++. This project demonstrates the use of Run-Length Encoding (RLE) and Huffman Coding algorithms to compress and decompress files efficiently.
+## Introduction
+ByteCompressor is an efficient and user-friendly file compression tool, developed in C++. It utilizes both Run-Length Encoding (RLE) and Huffman Coding techniques, catering to different compression needs. This application stands out for its ability to process binary files and it is a straightforward command-line interface.
 
-## Features
+## Key Features
 
-- **Run-Length Encoding (RLE):** A simple compression technique that is particularly effective on data where many consecutive elements are the same.
-- **Huffman Coding:** An optimal prefix code used for lossless data compression, based on the frequency of characters appearing in a file.
-- **Support for Binary Files:** Can handle binary files, making it versatile for various types of data.
-- **User-Friendly Interface:** Easy-to-use command line interface for choosing between compression and decompression, as well as selecting the desired algorithm.
-- **Modular Design:** The project is structured in a modular way, separating Huffman Coding and RLE logic into different files.
+- **Two Compression Algorithms**: 
+  - **Run-Length Encoding (RLE)**: Best suited for data with repeated elements.
+  - **Huffman Coding**: Ideal for creating optimal, lossless compression for diverse data sets.
+- **Binary File Support**: Capable of compressing and decompressing binary files.
+- **User-Friendly CLI**: Simple and interactive command-line interface for ease of use.
+- **Modular Code Structure**: Clean and well-organized codebase for easy understanding and modification.
 
-## Programming Language
+## Technologies Used
 
-- The project is entirely written in C++.
+- **C++**: The entire application is written in C++, leveraging its powerful STL (Standard Template Library).
 
-## How to Run
+## Project Structure
+
+ByteCompressor/
+├── src/
+│ ├── main.cpp - Main application entry point.
+│ ├── HuffmanCoding.cpp - Implements Huffman Coding algorithm.
+│ └── RunLengthEncoding.cpp - Implements Run-Length Encoding algorithm.
+├── include/
+│ └── compression_tool.h - Header file for compression and decompression functions.
+
+markdown
+Copy code
+
+## Getting Started
 
 ### Prerequisites
 
-Ensure you have a C++ compiler installed on your system, such as GCC or Clang.
+- A C++ compiler (like GCC or Clang).
+- Basic knowledge of command-line operations.
 
-### Compilation
+### Compiling the Program
 
-Navigate to the project directory and compile the source files. For example, using `g++`:
+1. Clone the repository to your local machine.
+2. Open a terminal and navigate to the root of the project directory.
+3. Compile the source files:
+   ```bash
+   g++ -o ByteCompressor src/main.cpp src/HuffmanCoding.cpp src/RunLengthEncoding.cpp -I include
+This will create an executable named ByteCompressor.
 
-```bash
-g++ -o ByteCompressor src/main.cpp src/HuffmanCoding.cpp src/RunLengthEncoding.cpp -I include
+Running ByteCompressor
+Execute the program in the terminal:
 
-This command will compile the source files and generate an executable named ByteCompressor.
-
-Running the Application
-After compiling, you can run the program using:
+bash
+Copy code
 ./ByteCompressor
+Follow the interactive prompts to select either compression or decompression and choose the desired algorithm.
 
-Follow the on-screen prompts to select compression/decompression and the algorithm you wish to use.
-
-Contributing
-Contributions to ByteCompressor are welcome. Please feel free to fork the repository, make changes, and submit pull requests.
+Contributions
+Contributions, bug reports, and feature requests are welcome! Feel free to fork the repo, push your changes in a new branch, and open a pull request.
 
 License
-This project is open source and available under the MIT License.
+Distributed under the MIT License. See the LICENSE file for more information.
 
-Author
-Shazcodes
+Author & Acknowledgements
+ByteCompressor is developed by Shazcodes.
