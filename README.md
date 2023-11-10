@@ -1,63 +1,26 @@
-# ByteCompressor
+# ByteCompressor README
 
-## Introduction
-ByteCompressor is an efficient and user-friendly file compression tool, developed in C++. It utilizes both Run-Length Encoding (RLE) and Huffman Coding techniques, catering to different compression needs. This application stands out for its ability to process binary files and it is a straightforward command-line interface.
+# Introduction
+# ByteCompressor is a personal project designed and developed by Shazcodes. This project showcases my skills in implementing file compression and decompression techniques. It is a simple yet powerful tool that provides efficient ways to handle file compression using two different methods: Run-Length Encoding (RLE) and Huffman Coding.
 
-## Key Features
+# Features
+# - **File Compression and Decompression**: ByteCompressor allows users to compress and decompress files using either Run-Length Encoding or Huffman Coding.
+# - **User-Friendly Interface**: The application offers a straightforward interface, guiding users through the process of compression and decompression.
+# - **Two Compression Methods**:
+#   - **Run-Length Encoding (RLE)**: A simple form of data compression where runs of data are stored as a single data value and count.
+#   - **Huffman Coding**: An algorithm used for lossless data compression, utilizing a variable-length code table for encoding a source symbol.
 
-- **Two Compression Algorithms**: 
-  - **Run-Length Encoding (RLE)**: Best suited for data with repeated elements.
-  - **Huffman Coding**: Ideal for creating optimal, lossless compression for diverse data sets.
-- **Binary File Support**: Capable of compressing and decompressing binary files.
-- **User-Friendly CLI**: Simple and interactive command-line interface for ease of use.
-- **Modular Code Structure**: Clean and well-organized codebase for easy understanding and modification.
+# Code Overview
+# - **Compression Tool Header** ([compression_tool.h](https://github.com/Shazcodes/ByteCompressor/blob/main/include/compression_tool.h)): Defines the functions for both RLE and Huffman Coding compression and decompression.
+# - **Huffman Coding Implementation** ([HuffmanCoding.cpp](https://github.com/Shazcodes/ByteCompressor/blob/main/src/HuffmanCoding.cpp)): Implements the logic for compressing and decompressing files using Huffman Coding.
+# - **Run-Length Encoding Implementation** ([RunLengthEncoding.cpp](https://github.com/Shazcodes/ByteCompressor/blob/main/src/RunLengthEncoding.cpp)): Implements the logic for compressing and decompressing files using Run-Length Encoding.
+# - **Main Application** ([main.cpp](https://github.com/Shazcodes/ByteCompressor/blob/main/src/main.cpp)): The entry point of the application, handling user inputs and directing to the appropriate compression or decompression method.
 
-## Technologies Used
+# How to Use
+# 1. **Choose Operation**: Start the application and choose between compression (1) and decompression (2).
+# 2. **Select Method**: Choose the desired compression method (1 for RLE, 2 for Huffman Coding).
+# 3. **File Input**: Enter the names of the input and output files.
+# 4. **Process Files**: The application will process the files according to the selected method and operation.
 
-- **C++**: The entire application is written in C++, leveraging its powerful STL (Standard Template Library).
-
-## Project Structure
-
-ByteCompressor/
-├── src/
-│ ├── main.cpp - Main application entry point.
-│ ├── HuffmanCoding.cpp - Implements Huffman Coding algorithm.
-│ └── RunLengthEncoding.cpp - Implements Run-Length Encoding algorithm.
-├── include/
-│ └── compression_tool.h - Header file for compression and decompression functions.
-
-markdown
-Copy code
-
-## Getting Started
-
-### Prerequisites
-
-- A C++ compiler (like GCC or Clang).
-- Basic knowledge of command-line operations.
-
-### Compiling the Program
-
-1. Clone the repository to your local machine.
-2. Open a terminal and navigate to the root of the project directory.
-3. Compile the source files:
-   ```bash
-   g++ -o ByteCompressor src/main.cpp src/HuffmanCoding.cpp src/RunLengthEncoding.cpp -I include
-This will create an executable named ByteCompressor.
-
-Running ByteCompressor
-Execute the program in the terminal:
-
-bash
-Copy code
-./ByteCompressor
-Follow the interactive prompts to select either compression or decompression and choose the desired algorithm.
-
-Contributions
-Contributions, bug reports, and feature requests are welcome! Feel free to fork the repo, push your changes in a new branch, and open a pull request.
-
-License
-Distributed under the MIT License. See the LICENSE file for more information.
-
-Author & Acknowledgements
-ByteCompressor is developed by Shazcodes.
+# Author
+# This project is a personal endeavor by Shazcodes, demonstrating my capabilities in software development, particularly in the area of data compression algorithms.
